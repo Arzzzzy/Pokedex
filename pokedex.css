@@ -1,0 +1,129 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #343434eb;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 36px;
+    color: #333;
+}
+h3 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.container {
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    display: block;
+    width: 680px;
+    height: 680px;
+    background: radial-gradient(
+        white 16px,
+        black 17px 18px,
+        white 19px 24px,
+        black 25px 32px,
+        transparent 33px
+      ),
+      linear-gradient(to bottom, red 50%, black 50%, white 51%);
+    border-radius: 50%;
+    border: 8px solid black;
+    box-shadow: inset -16px -8px 0 0 rgba(0, 0, 0, 0.2);  
+    animation: fall 0.5s ease-in-out 1s,
+    shake 1.25s cubic-bezier(0.36, 0.07, 0.19, 0.97) 1.5s 3,
+    catch 0.5s ease-out 5.25s forwards;
+}
+@keyframes shake {
+  0% {
+    transform: translateX(0) rotate(0);
+  }
+  20% {
+    transform: translateX(-10px) rotate(-20deg);
+  }
+  30% {
+    transform: translateX(10px) rotate(20deg);
+  }
+  50% {
+    transform: translateX(-10px) rotate(-10deg);
+  }
+  60% {
+    transform: translateX(10px) rotate(10deg);
+  }
+  100% {
+    transform: translateX(0) rotate(0);
+  }
+}
+@keyframes fall {
+  0% {
+    transform: translateY(-200%);
+  }
+  60% {
+    transform: translateY(0);
+  }
+  80% {
+    transform: translateY(-10%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes catch {
+  to {
+    filter: saturate(0.8) brightness(0.8);
+  }
+}
+
+
+input[type="text"] {
+    padding: 10px;
+    width: 40%;
+    margin-right: 10px;
+    border: 3px solid #060606;
+    border-radius: 5px;
+    margin-top: auto;
+}
+
+.pokeball-btn {
+    cursor: pointer;
+    width: 60px; /* Set the width as desired */
+    height: auto; /* Maintain aspect ratio */
+    border: none;
+    background: none;
+    outline: none;
+}
+
+.pokeball-btn:hover {
+    opacity: 0.8;
+}
+
+#pokemonInfo {
+    margin-top: 100px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+h2 {
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+p {
+    font-size: 16px;
+    color: #161616;
+    margin-top: 5px;
+}
+
+.logo {
+    width: 300px; 
+    height: auto; 
+}
+
+
+  
